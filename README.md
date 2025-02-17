@@ -1,19 +1,13 @@
 
 # Multi-Timer Manager
 
-======================
-
 A Streamlit web application designed to manage multiple timers with features like notifications, tags, history tracking, and data visualization.
 
 ## Overview
 
------------
-
 This project provides a user-friendly interface for creating and managing multiple timers. It supports customizable timer names, durations, colors, and tags. The application also includes features for pausing, resetting, and completing timers, with sound notifications upon completion. Additionally, it tracks timer history and offers data visualization to analyze time usage.
 
 ## Features
-
-------------
 
 - **Timer Creation**: Easily create new timers with customizable names, durations, colors, and tags.
 - **Real-time Updates**: View active timers with real-time progress bars and remaining time displays.
@@ -22,10 +16,7 @@ This project provides a user-friendly interface for creating and managing multip
 - **History Tracking**: Store and display completed timer records.
 - **Data Visualization**: Analyze time allocation and tag usage through interactive charts.
 
-
 ## Requirements
-
-------------
 
 - **Python 3.8+**: Required for running the application.
 - **Streamlit**: Main framework for the web application.
@@ -34,17 +25,13 @@ This project provides a user-friendly interface for creating and managing multip
 - **Streamlit-Tags**: Component for tag management.
 - **Winsound** (Windows): For sound notifications.
 
-
 ## Setup
-
---------
 
 ### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/topogoogles/multi-timer-manager.git
 ```
-
 
 ### Step 2: Install Dependencies
 
@@ -58,29 +45,21 @@ uv add streamlit pandas matplotlib streamlit-tags pytest
 uv add winsound  # For Windows sound support
 ```
 
-
 ### Step 3: Run the Application
 
 ```bash
 uv run streamlit run src/multi-timer-manager.py
 ```
 
-
 ## Contributing
-
-------------
 
 Contributions are welcome! Please submit pull requests with detailed descriptions of changes.
 
 ## License
 
--------
-
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
-
----------------
 
 - Special thanks to the Streamlit and Streamlit-Tags communities for their support and documentation.
 
