@@ -11,7 +11,7 @@ tests/__pycache__/              # Python bytecode in tests
 # Dependency management
 uv.lock                         # UV lock file
 multi_timer_manager.egg-info/   # Distribute/Setuptools build artifact
-*.egg-info                      # Other egg-info directories
+src/*.egg-info                  # Other egg-info directories
 
 # Testing
 .pytest_cache/                  # Pytest cache directory
