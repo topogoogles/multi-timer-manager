@@ -1,4 +1,3 @@
-
 # Multi-Timer Manager
 
 A Streamlit web application designed to manage multiple timers with features like notifications, tags, history tracking, and data visualization.
@@ -15,45 +14,96 @@ This project provides a user-friendly interface for creating and managing multip
 - **Sound Notifications**: Receive audible alerts when timers complete.
 - **History Tracking**: Store and display completed timer records.
 - **Data Visualization**: Analyze time allocation and tag usage through interactive charts.
+- **Testing**: Includes a comprehensive suite of tests to ensure functionality.
 
 ## Requirements
 
-- **Python 3.8+**: Required for running the application.
-- **Streamlit**: Main framework for the web application.
-- **Pandas**: Used for data handling and analysis.
-- **Matplotlib**: Provides visualization capabilities.
-- **Streamlit-Tags**: Component for tag management.
-- **Winsound** (Windows): For sound notifications.
+- **Python 3.11+**: Required for running the application.
+- **UV**: A fast and modern Python package manager.
+- Dependencies listed in `pyproject.toml`.
 
 ## Setup
 
 ### Step 1: Clone the Repository
 
 ```bash
+
 git clone https://github.com/topogoogles/multi-timer-manager.git
-```
-
-### Step 2: Install Dependencies
-
-Use UV for dependency management (install UV if not already installed):
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
 cd multi-timer-manager
-uv init
-uv add streamlit pandas matplotlib streamlit-tags pytest
-uv add winsound  # For Windows sound support
+
 ```
 
-### Step 3: Run the Application
+### Step 2: Install UV (if not already installed)
 
 ```bash
-uv run streamlit run src/multi-timer-manager.py
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+```
+
+Make sure `uv` is in your PATH.
+
+### Step 3: Create and Activate Virtual Environment
+
+```bash
+
+uv venv venv
+
+```
+
+- Activate virtual environment
+  - Windows:
+    .\venv\Scripts\activate
+  - macOS/Linux:
+    source venv/bin/activate
+
+### Step 4: Install Dependencies using UV
+
+Initialize UV and sync dependencies based on `pyproject.toml`:
+
+```bash
+
+uv sync
+
+```
+
+This command will read the dependencies listed in `pyproject.toml` and install them into the virtual environment.
+
+### Step 5: Run the Application
+
+```bash
+
+uv run streamlit run src/multi_timer_manager.py
+
+```
+
+## Testing
+
+The project includes a suite of tests to ensure functionality.
+See `docs/README_tests.md` for details on how to run the tests.
+
+## Project Structure
+
+```text
+
+multi-timer-manager/
+├── src/
+│   └── multi_timer_manager.py  \# Main application code
+├── tests/
+│   └── test_multi_timer_manager.py  \# Test file
+├── docs/
+│   └── README_tests.md  \# Testing documentation
+├── pyproject.toml  \# Project metadata and dependencies
+├── pytest.ini    \# Pytest configuration
+├── README.md     \# This file
+├── uv.lock       \# Dependency lock file
+└── LICENSE       \# License file
+
 ```
 
 ## Contributing
 
-Contributions are welcome! Please submit pull requests with detailed descriptions of changes.
+Contributions are welcome! Please submit pull requests with detailed descriptions of changes. Be sure to run the tests before submitting.
 
 ## License
 
