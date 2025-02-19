@@ -1,21 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "multi-timer-manager"
 version = "0.1.0"
-description = "A Streamlit web application for managing multiple timers with notifications, tags, history tracking, and data visualization."
-readme = "README.md"
-requires-python = ">=3.11"
+description = "A multi-timer manager application."
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+    { name = "topogoogles", email = "araujoagustin@gmail.com" }
+]
+license = { file = "LICENSE" }
 dependencies = [
-    "matplotlib",
-    "pandas",
-    "pytest",
-    "simpleaudio",
-    "streamlit",
-    "streamlit-tags",
+    "streamlit>=1.31",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+    "streamlit-tags>=1.2",
+    "pytest>=8.3",
+    "simpleaudio>=1.0",
+    "pluggy>=1.5",
+    "iniconfig>=2.0"
 ]
-
-[dependency-groups]
-dev = [
-    "black>=25.1.0",
-    "flake8>=7.1.2",
-]
-

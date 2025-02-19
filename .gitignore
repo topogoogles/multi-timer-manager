@@ -1,8 +1,26 @@
+# Python-related files and folders
+venv/                           # Virtual environment directory
 .venv/
-__pycache__/
-*.pyc
-*.csv
-*.log
-*.env
-.DS_Store
-uv.lock
+__pycache__/                    # Python bytecode
+src/__pycache__/                # Python bytecode in src
+tests/__pycache__/              # Python bytecode in tests
+*.pyc                           # Compiled Python files
+*.pyo                           # Optimized Python files
+*.pyd                           # Python extension modules
+
+# Dependency management
+uv.lock                         # UV lock file
+multi_timer_manager.egg-info/   # Distribute/Setuptools build artifact
+*.egg-info                      # Other egg-info directories
+
+# Testing
+.pytest_cache/                  # Pytest cache directory
+
+# OS-specific files
+.DS_Store                       # macOS folder settings
+
+# Data
+data/*                          # You can exclude all files in data or list specific files
+
+# Other
+*.python-version                # Used by pyenv

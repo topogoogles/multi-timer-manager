@@ -1,0 +1,8 @@
+streamlit>=1.31
+pandas>=2.2
+matplotlib>=3.8
+streamlit-tags>=1.2
+pytest>=8.3.4
+simpleaudio>=1.0.4
+pluggy>=1.5.0
+iniconfig>=2.0.0
